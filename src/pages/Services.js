@@ -73,21 +73,50 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section services-main">
         <div className="container">
+          <div className="services-intro">
+            <h2 className="section-title">Our Comprehensive Services</h2>
+            <p className="section-subtitle">
+              We provide end-to-end corporate supply solutions designed to streamline your business operations 
+              and enhance productivity across all departments.
+            </p>
+          </div>
           <div className="services-grid">
             {services.map((service) => (
               <div key={service.id} className="service-card">
-                <div className="service-icon">
-                  {service.icon}
+                <div className="service-header">
+                  <div className="service-icon">
+                    {service.icon}
+                  </div>
+                  <h3 className="service-title">{service.title}</h3>
                 </div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-description">{service.description}</p>
-                <ul className="service-features">
-                  {service.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
+                <div className="service-content">
+                  <p className="service-description">{service.description}</p>
+                  <div className="service-features">
+                    <h4>What We Offer:</h4>
+                    <ul className="features-list">
+                      {service.features.map((feature, index) => (
+                        <li key={index} className="feature-item">
+                          <div className="feature-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"/>
+                            </svg>
+                          </div>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div className="service-footer">
+                  <div className="service-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12,2L13.09,8.26L22,9L17,14L18.18,22L12,18.77L5.82,22L7,14L2,9L10.91,8.26L12,2Z"/>
+                    </svg>
+                    <span>Premium Quality</span>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
