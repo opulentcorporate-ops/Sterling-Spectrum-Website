@@ -69,30 +69,25 @@
   flex-wrap: wrap;
 }
 
-.hero-stats {
+.hero-features {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
-.stat {
+.feature {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-}
-
-.stat-number {
-  font-size: 2rem;
-  font-weight: 700;
+  gap: 0.5rem;
   color: var(--primary-yellow);
-  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
-.stat-label {
-  font-size: 0.875rem;
-  opacity: 0.8;
-  margin-top: 0.25rem;
+.feature svg {
+  color: var(--primary-yellow);
+  flex-shrink: 0;
 }
 
 .hero-image {
@@ -215,7 +210,7 @@
     max-width: 300px;
   }
   
-  .hero-stats {
+  .hero-features {
     justify-content: center;
   }
   

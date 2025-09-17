@@ -25,18 +25,24 @@ const Hero = () => {
                 View Our Services
               </Link>
             </div>
-            <div className="hero-stats">
-              <div className="stat">
-                <span className="stat-number">500+</span>
-                <span className="stat-label">Happy Clients</span>
+            <div className="hero-features">
+              <div className="feature">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12,2L13.09,8.26L22,9L17,14L18.18,22L12,18.77L5.82,22L7,14L2,9L10.91,8.26L12,2Z"/>
+                </svg>
+                <span>Premium Quality</span>
               </div>
-              <div className="stat">
-                <span className="stat-number">20+</span>
-                <span className="stat-label">Years Experience</span>
+              <div className="feature">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12,2C6.48,2 2,6.48 2,12s4.48 10 10 10 10-4.48 10-10S17.52 2 12,2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <span>Fast Delivery</span>
               </div>
-              <div className="stat">
-                <span className="stat-number">24/7</span>
-                <span className="stat-label">Customer Support</span>
+              <div className="feature">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11H16.2V10C16.2,7.8 14.4,6 12,6C9.6,6 7.8,7.8 7.8,10V11H9.2V10C9.2,8.6 10.6,7 12,7M12,8.5C11.2,8.5 10.5,9.2 10.5,10S11.2,11.5 12,11.5S13.5,10.8 13.5,10S12.8,8.5 12,8.5Z"/>
+                </svg>
+                <span>GEM Registered</span>
               </div>
             </div>
           </div>

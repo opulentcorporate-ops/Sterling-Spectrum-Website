@@ -57,7 +57,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4>Address</h4>
-                    <p>B-18, East Arjun Nagar, Shahdara, New Delhi, Delhi 110032</p>
+                    <p>LGF-19, Rajhans Plaza, Kala Pathar Road<br />Rajhans Market, Ahinsa Khand 1<br />Indirapuram, Ghaziabad, 201014<br />Uttar Pradesh, India</p>
                   </div>
                 </div>
 
