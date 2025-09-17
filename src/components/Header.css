@@ -1,12 +1,35 @@
 .header {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.2) 0%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    rgba(255, 255, 255, 0.2) 100%);
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 0 0 20px 20px;
 }
 
 .header-content {
@@ -14,7 +37,54 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
+
+/* Scroll effect for enhanced glass appearance */
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Glass effect animation */
+@keyframes glassShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: glassShimmer 3s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Ensure sticky behavior works on all browsers */
 
 .logo {
   display: flex;
@@ -69,6 +139,10 @@
 
 .nav-link:hover {
   color: var(--primary-blue);
+  background: rgba(37, 99, 235, 0.05);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: -0.5rem -1rem;
 }
 
 .nav-link::after {
@@ -82,8 +156,18 @@
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
+}
+
+.nav-link.active {
+  color: var(--primary-blue);
+  font-weight: 600;
+  background: rgba(37, 99, 235, 0.05);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: -0.5rem -1rem;
 }
 
 .nav-cta {
@@ -144,6 +228,20 @@
     padding: 1rem 0;
     text-align: center;
     width: 100%;
+  }
+  
+  .nav-link:hover {
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 0;
+  }
+  
+  .nav-link.active {
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 0;
   }
 
   .nav-cta {

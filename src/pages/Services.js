@@ -67,7 +67,8 @@ const Services = () => {
           <div className="hero-content">
             <h1>Our Services</h1>
             <p className="hero-subtitle">
-              Comprehensive corporate supply solutions tailored to your business needs
+              Comprehensive business solutions tailored to your needs. We deliver quality 
+              products and exceptional service to help your business thrive.
             </p>
           </div>
         </div>

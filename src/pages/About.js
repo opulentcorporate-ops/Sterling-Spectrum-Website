@@ -9,7 +9,8 @@ const About = () => {
           <div className="hero-content">
             <h1>About Sterling Spectrum</h1>
             <p className="hero-subtitle">
-              Your trusted partner in corporate supplies and business solutions
+              Your trusted partner in corporate supplies and business solutions. 
+              We deliver quality products and exceptional service to help your business thrive.
             </p>
           </div>
         </div>

@@ -32,12 +32,19 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
+  height: 40px;
+}
+
+.footer-logo h3 {
+  margin: 0;
+  line-height: 1;
 }
 
 .footer-logo-img {
   height: 40px;
   width: auto;
   object-fit: contain;
+  display: block;
 }
 
 .footer-description {
@@ -168,6 +175,11 @@
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  
+  .footer-logo {
+    justify-content: center;
+    text-align: center;
   }
   
   .footer-bottom {

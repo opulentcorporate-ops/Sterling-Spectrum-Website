@@ -1,8 +1,8 @@
 .about-page .hero-section {
   background: linear-gradient(135deg, var(--light-blue), var(--subtle-blue));
   color: var(--dark-gray);
-  padding: 120px 0 80px;
-  text-align: center;
+  padding: 1.5px 0 1px;
+  text-align: left;
   border-bottom: 1px solid #e2e8f0;
 }
 
@@ -16,7 +16,7 @@
   font-size: 1.25rem;
   opacity: 0.9;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .about-content {

@@ -4,6 +4,31 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced smooth scrolling for better performance */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Smooth scrolling for anchor links */
+a[href^="#"] {
+  scroll-behavior: smooth;
+}
+
+/* Smooth scrolling for all elements */
+html, body {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Smooth transitions for better UX */
+.App {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -44,7 +69,9 @@ code {
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
@@ -53,6 +80,7 @@ code {
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 16px;
+  text-align: center;
 }
 
 .btn-primary {
@@ -78,14 +106,16 @@ code {
 }
 
 .btn-outline {
-  background-color: transparent;
-  color: var(--professional-blue);
-  border: 1px solid var(--professional-blue);
+  background-color: transparent !important;
+  color: var(--professional-blue) !important;
+  border: 2px solid var(--professional-blue) !important;
+  font-weight: 600;
 }
 
 .btn-outline:hover {
-  background-color: var(--professional-blue);
-  color: var(--white);
+  background-color: var(--professional-blue) !important;
+  color: var(--white) !important;
+  border-color: var(--professional-blue) !important;
 }
 
 /* Responsive Design */

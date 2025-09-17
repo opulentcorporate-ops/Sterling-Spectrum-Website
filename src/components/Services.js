@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 import './Services.css';
 
 const Services = () => {
+  const addToRefs = useScrollAnimation();
   const services = [
     {
       id: 1,
       title: 'Printing Services',
-      description: 'Professional printing services for documents, marketing materials, and business needs.',
+      description: 'Professional printing services for all your business needs including business cards, letterheads, brochures, flyers, banners, and marketing materials. We offer high-quality digital and offset printing with fast turnaround times and competitive pricing.',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
           <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19M17,12H7V10H17V12M15,16H7V14H15V16M17,8H7V6H17V8Z"/>
@@ -17,7 +19,7 @@ const Services = () => {
     {
       id: 2,
       title: 'Corporate Gifting',
-      description: 'Premium corporate gifting solutions for your business relationships and client appreciation.',
+      description: 'Premium corporate gifting solutions designed to strengthen business relationships and show appreciation to clients and employees. We offer customized gift sets, branded merchandise, luxury items, and seasonal corporate gifts with professional packaging and delivery.',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12,2L13.09,8.26L22,9L17,14L18.18,22L12,18.77L5.82,22L7,14L2,9L10.91,8.26L12,2Z"/>
@@ -27,7 +29,7 @@ const Services = () => {
     {
       id: 3,
       title: 'Computer Hardware',
-      description: 'Complete range of computer hardware including processors, motherboards, and components.',
+      description: 'Complete range of computer hardware solutions including desktop computers, laptops, servers, processors, motherboards, RAM, storage devices, and networking equipment. We provide both new and refurbished hardware with warranty and technical support.',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
           <path d="M4,6H20V16H4M20,18A2,2 0 0,0 22,16V6C22,4.89 21.1,4 20,4H4C2.89,4 2,4.89 2,6V16A2,2 0 0,0 4,18H0V20H24V18H20Z"/>
@@ -37,7 +39,7 @@ const Services = () => {
     {
       id: 4,
       title: 'Computer Peripherals',
-      description: 'Wide selection of computer peripherals including keyboards, mice, monitors, and accessories.',
+      description: 'Wide selection of computer peripherals and accessories including keyboards, mice, monitors, webcams, speakers, printers, scanners, and other essential office equipment. All products come with manufacturer warranty and our expert installation support.',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12,2C6.48,2 2,6.48 2,12S6.48,22 12,22 22,17.52 22,12 17.52,2 12,2M12,20C7.59,20 4,16.41 4,12S7.59,4 12,4 20,7.59 20,12 16.41,20 12,20M12,6C8.69,6 6,8.69 6,12S8.69,18 12,18 18,15.31 18,12 15.31,6 12,6M12,8C9.79,8 8,9.79 8,12S9.79,16 12,16 16,14.21 16,12 14.21,8 12,8Z"/>
@@ -47,7 +49,7 @@ const Services = () => {
     {
       id: 5,
       title: 'Office Supply/ Stationery',
-      description: 'Complete range of office supplies and stationery for all your business needs.',
+      description: 'Complete range of office supplies and stationery including pens, notebooks, folders, binders, paper products, desk organizers, and all essential office materials. We maintain large inventory for bulk orders and provide regular delivery services to keep your office well-stocked.',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
           <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19M17,12H7V10H17V12M15,16H7V14H15V16M17,8H7V6H17V8Z"/>
@@ -59,7 +61,7 @@ const Services = () => {
   return (
     <section className="services section">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header animate-on-scroll" ref={addToRefs}>
           <h2 className="section-title">Our Services</h2>
           <p className="section-subtitle">
             Comprehensive solutions to meet all your corporate supply needs
@@ -67,8 +69,8 @@ const Services = () => {
         </div>
         
         <div className="services-grid">
-          {services.map((service) => (
-            <div key={service.id} className="service-card">
+          {services.map((service, index) => (
+            <div key={service.id} className={`service-card animate-scale-in`} ref={addToRefs} style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="service-icon">
                 {service.icon}
               </div>
@@ -78,7 +80,7 @@ const Services = () => {
           ))}
         </div>
         
-        <div className="services-cta">
+        <div className="services-cta animate-fade-in-left" ref={addToRefs}>
           <h3>Need Help Choosing?</h3>
           <p>Our team is here to help you find the perfect solutions for your business needs.</p>
           <div className="cta-buttons">

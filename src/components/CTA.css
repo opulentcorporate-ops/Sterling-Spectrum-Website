@@ -1,9 +1,21 @@
 .cta {
   background: linear-gradient(135deg, var(--professional-blue), var(--accent-blue));
-  color: var(--white);
+  color: #ffffff !important;
   position: relative;
   overflow: hidden;
   padding: 5rem 0;
+}
+
+.cta h1,
+.cta h2,
+.cta h3,
+.cta h4,
+.cta h5,
+.cta h6,
+.cta p,
+.cta span,
+.cta div {
+  color: #ffffff !important;
 }
 
 .cta::before {
@@ -29,22 +41,29 @@
   text-align: center;
 }
 
+.cta-main * {
+  color: #ffffff !important;
+}
+
 .cta-text h2 {
   font-size: 2.75rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  color: var(--white);
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .cta-text p {
   font-size: 1.25rem;
   line-height: 1.6;
   margin-bottom: 3rem;
-  opacity: 0.9;
+  opacity: 0.95;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .cta-actions {
