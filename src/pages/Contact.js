@@ -57,7 +57,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4>Address</h4>
-                    <p>LGF-19, Rajhans Plaza, Kala Pathar Road<br />Rajhans Market, Ahinsa Khand 1<br />Indirapuram, Ghaziabad, 201014<br />Uttar Pradesh, India</p>
+                    <p>B-18, East Arjun Nagar, Shahdara, New Delhi, Delhi 110032</p>
                   </div>
                 </div>
 
@@ -93,7 +93,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4>Business Hours</h4>
-                    <p>Monday - Friday: 8:00 AM - 6:00 PM<br />Saturday: 9:00 AM - 4:00 PM</p>
+                    <p>Monday - Friday: 10 AM - 6 PM<br /></p>
                   </div>
                 </div>
               </div>

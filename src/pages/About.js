@@ -63,43 +63,6 @@ const About = () => {
         </div>
       </section>
 
-      <section className="section gem-section">
-        <div className="container">
-          <div className="gem-content">
-            <div className="gem-badge-large">
-              <div className="gem-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12,2L13.09,8.26L22,9L17,14L18.18,22L12,18.77L5.82,22L7,14L2,9L10.91,8.26L12,2Z"/>
-                </svg>
-              </div>
-              <div className="gem-text">
-                <h2>GEM Registered</h2>
-                <p>Sterling Spectrum is officially registered on the Government e-Marketplace (GEM) platform, ensuring compliance with government procurement standards and providing access to government contracts and tenders.</p>
-                <div className="gem-features">
-                  <div className="gem-feature">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"/>
-                    </svg>
-                    <span>Government Compliance</span>
-                  </div>
-                  <div className="gem-feature">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"/>
-                    </svg>
-                    <span>Transparent Procurement</span>
-                  </div>
-                  <div className="gem-feature">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"/>
-                    </svg>
-                    <span>Quality Assurance</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="section values-section">
         <div className="container">
