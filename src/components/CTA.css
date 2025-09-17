@@ -3,7 +3,7 @@
   color: var(--white);
   position: relative;
   overflow: hidden;
-  padding: 6rem 0;
+  padding: 5rem 0;
 }
 
 .cta::before {
@@ -20,18 +20,17 @@
 .cta-content {
   position: relative;
   z-index: 1;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 .cta-main {
   text-align: center;
-  margin-bottom: 4rem;
 }
 
 .cta-text h2 {
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -43,35 +42,9 @@
   line-height: 1.6;
   margin-bottom: 3rem;
   opacity: 0.9;
-  max-width: 600px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.cta-stats {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-}
-
-.stat-item {
-  text-align: center;
-}
-
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary-yellow);
-  margin-bottom: 0.5rem;
-  line-height: 1;
-}
-
-.stat-label {
-  font-size: 1rem;
-  opacity: 0.9;
-  font-weight: 500;
 }
 
 .cta-actions {
@@ -87,106 +60,43 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   font-size: 1.125rem;
   font-weight: 600;
-  border-radius: 12px;
+  border-radius: 8px;
   transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--white) !important;
 }
 
 .whatsapp-cta:hover {
   background: #128C7E !important;
   border-color: #128C7E !important;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  color: var(--white) !important;
 }
 
 .btn-outline {
   background: transparent !important;
   border: 2px solid var(--white) !important;
   color: var(--white) !important;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   font-size: 1.125rem;
   font-weight: 600;
-  border-radius: 12px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   gap: 0.75rem;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .btn-outline:hover {
   background: var(--white) !important;
   color: var(--professional-blue) !important;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
-}
-
-.cta-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 4rem;
-}
-
-.feature-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: 2rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.feature-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary-yellow), var(--secondary-yellow));
-}
-
-.feature-card:hover {
-  transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-.feature-icon {
-  width: 60px;
-  height: 60px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.5rem;
-  color: var(--primary-yellow);
-  transition: all 0.3s ease;
-}
-
-.feature-card:hover .feature-icon {
-  background: var(--primary-yellow);
-  color: var(--professional-blue);
-  transform: scale(1.1);
-}
-
-.feature-card h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: var(--white);
-}
-
-.feature-card p {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
-  font-size: 1rem;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
 /* Responsive Design */
@@ -203,14 +113,6 @@
     font-size: 1.125rem;
   }
   
-  .cta-stats {
-    gap: 2rem;
-  }
-  
-  .stat-number {
-    font-size: 2rem;
-  }
-  
   .cta-actions {
     flex-direction: column;
     align-items: center;
@@ -222,28 +124,14 @@
     max-width: 300px;
     justify-content: center;
   }
-  
-  .cta-features {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-  
-  .feature-card {
-    padding: 1.5rem;
-  }
 }
 
 @media (max-width: 480px) {
   .cta-text h2 {
-    font-size: 1.875rem;
+    font-size: 2rem;
   }
   
-  .cta-stats {
-    gap: 1.5rem;
-  }
-  
-  .stat-number {
-    font-size: 1.75rem;
+  .cta-text p {
+    font-size: 1rem;
   }
 }
